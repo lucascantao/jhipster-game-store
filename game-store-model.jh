@@ -1,0 +1,30 @@
+
+entity Game {
+	@id id Long
+    title String required
+    price Long required
+    description TextBlob
+}
+
+entity Specs {
+	@id id UUID
+    processor String required
+    video String required
+    ram String required
+    disk String required
+    connection Boolean required
+}
+
+entity Account {
+	@id id UUID
+    name String required
+    birthday LocalDate required
+}
+
+relationship OneToOne {
+	Game to Specs
+}
+
+relationship ManyToMany {
+	Account to Game
+}
