@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory = lucascantao.\
+    gamestore.config.SqlTestContainersSpringContextCustomizerFactory
