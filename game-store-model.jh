@@ -22,9 +22,9 @@ entity Account {
 }
 
 relationship OneToOne {
-	Game to Specs
+	Game{specs} to Specs
 }
 
 relationship ManyToMany {
-	Account to Game
+	Account{game(name)} to Game{account}
 }
